@@ -3,11 +3,14 @@ import java.awt.EventQueue;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.ListSelectionModel;
 
 import java.awt.BorderLayout;
 import java.awt.Image;
+
 import javax.swing.JTabbedPane;
 import javax.swing.JButton;
+import javax.swing.JList;
 
 
 public class User {
@@ -91,37 +94,16 @@ public class User {
 		frame.getContentPane().add(label_7);
 		label_7.setIcon(new ImageIcon(Images));
 		
-		JLabel lblCard = new JLabel("Card 1");
-		lblCard.setBounds(74, 225, 46, 100);
-		frame.getContentPane().add(lblCard);
-		
-		JLabel lblCard_1 = new JLabel("Card 2");
-		lblCard_1.setBounds(130, 225, 46, 100);
-		frame.getContentPane().add(lblCard_1);
-		
-		JLabel lblCard_2 = new JLabel("Card 3");
-		lblCard_2.setBounds(191, 225, 46, 100);
-		frame.getContentPane().add(lblCard_2);
-		
-		JLabel lblCard_3 = new JLabel("Card 4");
-		lblCard_3.setBounds(247, 225, 46, 100);
-		frame.getContentPane().add(lblCard_3);
-		
-		JLabel lblCard_4 = new JLabel("Card 5");
-		lblCard_4.setBounds(303, 225, 46, 100);
-		frame.getContentPane().add(lblCard_4);
-		
-		JLabel lblCard_5 = new JLabel("Card 6");
-		lblCard_5.setBounds(359, 225, 46, 100);
-		frame.getContentPane().add(lblCard_5);
-		
-		JLabel lblCard_6 = new JLabel("Card 7");
-		lblCard_6.setBounds(415, 225, 46, 100);
-		frame.getContentPane().add(lblCard_6);
-		
 		JButton btnChat = new JButton("Chat");
 		btnChat.setBounds(10, 41, 89, 23);
 		frame.getContentPane().add(btnChat);
+		
+		JList list = new JList();
+		list.setBounds(55, 241, 378, 84);
+		frame.getContentPane().add(list);
+		list.setLayoutOrientation(JList.VERTICAL_WRAP);
+		list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		list.setVisibleRowCount(-1);
 		
 		
 	}
